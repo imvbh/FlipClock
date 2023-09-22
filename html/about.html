@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlipClock</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/about.css">
+    <script src="../js/about.js" defer></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> -->
+    <script src="https://kit.fontawesome.com/20b8503bc7.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+<body>
+
+    <div class="loader-wrapper">
+        <span class="loader"></span>
+    </div>
+
+    <script>
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                var loaderWrapper = document.querySelector(".loader-wrapper");
+                loaderWrapper.style.transition = "opacity 0.1s"; // Optional: Add a CSS transition for a fade-out effect
+                loaderWrapper.style.opacity = "0";
+                loaderWrapper.remove()
+                // Set opacity to 0 to fade out
+            }, 1000); // 500 milliseconds (0.5 seconds) delay
+        });
+    </script>
+
+    <div class="wrapper">
+        <div class="fas fa-bars btn" id="nav-btn"></div>
+        <div class="fas fa-sun btn" id="lightMode-icon"></div>
+
+        <nav class="sidebar">
+            <div class="title">FlipClock</div>
+
+            <ul class="list-items">
+                <li>
+                    <a href="../index.html" data-clock-type="clock"><i class="fa-solid fa-clock"></i>Clock</a>
+                </li>
+                <li>
+                    <a href="timer.html" data-clock-type="clock"><i class="fa-solid fa-clock"></i>Timer</a>
+                </li>
+                <li>
+                    <a href="#" data-clock-type="about"><i class="fa-solid fa-question"></i>About</a>
+                </li>
+
+                <div class="icons">
+                    <a href="#"><i class="fa-solid fa-address-card"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+                <div class="credits">
+                    <p>Made with ❤️ by imvbh</p>
+                </div>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <h1 class="heading">
+            FlipClock
+        </h1>
+        <h3 class="subhead">
+            About
+        </h3>
+        <p class="aboutP">
+            This FlipClock application serves as a versatile and efficient tool suitable for various purposes, such as studying or as a screensaver. Notably, it operates without the need for an internet connection and boasts minimal latency, ensuring accurate timekeeping with perfect updates.
+        </p>
+        <h3 class="subhead">
+            Key Features
+        </h3>
+        <p class="funcP">
+        <ul>
+            <li>
+                <b>Smooth Flips:</b> The clock animations are remarkably smooth, setting this FlipClock apart from others available on the internet.
+            </li>
+            <li>
+                <b>Full Screen:</b> A convenient double-tap feature allows you to switch to full-screen mode for enhanced visibility and focus.
+            </li>
+            <li>
+                <b>Time Formats:</b> You can effortlessly switch between 12-hour and 24-hour time formats, adapting to your preference and needs.
+            </li>
+
+            <li>
+                <b>Seconds Toggle:</b> The option to enable or disable seconds provides flexibility in displaying time information.
+            </li>
+            <li>
+                <b>Day/Night Mode:</b> Enjoy a comfortable viewing experience with the ability to switch between day and night modes, ensuring readability in various lighting conditions.
+            </li>
+            <li>
+                <b>Auto-Hide Buttons:</b> To maximize your clock's visual appeal and minimize distractions, all control buttons automatically disappear after 2 seconds of user inactivity.
+            </li>
+        </ul>
+        </p>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlipClock</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> -->
+    <script src="https://kit.fontawesome.com/20b8503bc7.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+<body>
+
+    <audio id="flipSound" preload="auto">
+        <source src="assets/flip-sound1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="loader-wrapper">
+        <span class="loader"></span>
+    </div>
+
+    <script>
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                var loaderWrapper = document.querySelector(".loader-wrapper");
+                loaderWrapper.style.transition = "opacity 0.1s"; // Optional: Add a CSS transition for a fade-out effect
+                loaderWrapper.style.opacity = "0";
+                loaderWrapper.remove()
+                // Set opacity to 0 to fade out
+            }, 1000); // 500 milliseconds (0.5 seconds) delay
+        });
+    </script>
+
+    <div class="wrapper">
+        <div class="fas fa-bars btn" id="nav-btn"></div>
+        <div class="fas fa-sun btn" id="lightMode-icon"></div>
+        <div class="seconds-btn btn"><i class="fa-solid fa-stopwatch-20"></i></div>
+        <div class="ampm-btn btn">24</div>
+
+        <nav class="sidebar">
+            <div class="title">FlipClock</div>
+
+            <ul class="list-items">
+                <li>
+                    <a href="#" data-clock-type="clock"><i class="fa-solid fa-clock"></i>Clock</a>
+                </li>
+                <li>
+                    <a href="html/timer.html" data-clock-type="clock"><i class="fa-solid fa-clock"></i>Timer</a>
+                </li>
+                <li>
+                    <a href="html/about.html" data-clock-type="about"><i class="fa-solid fa-question"></i>About</a>
+                </li>
+
+                <div class="icons">
+                    <a href="#"><i class="fa-solid fa-address-card"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+                <div class="credits">
+                    <p>Made with ❤️ by imvbh</p>
+                </div>
+
+            </ul>
+        </nav>
+    </div>
+
+    <section class="container" id="dynamic-content">
+        <div class="clock" id="clock-content">
+            <div class="container-segment">
+                <div class="headings">
+                    <p></p>
+                    <div class="flip-card left" hours-tens>
+                        <div class="top">0</div>
+                        <div class="bottom">0</div>
+                    </div>
+                    <div class="flip-card right" hours-units>
+                        <div class="top">0</div>
+                        <div class="bottom">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="colon">
+                :
+            </div>
+
+            <div class="container-segment">
+                <div class="headings">
+                    <p></p>
+                    <div class="flip-card left" minutes-tens>
+                        <div class="top">0</div>
+                        <div class="bottom">0</div>
+                    </div>
+                    <div class="flip-card right" minutes-units>
+                        <div class="top">0</div>
+                        <div class="bottom">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-segment last ">
+                <div class="ampm">
+                    <div class="flip-card card-ampm" am-pm>
+                        <div class="top ">AM</div>
+                        <div class="bottom ">AM</div>
+                    </div>
+                </div>
+                <div class="headings seconds-segment" id="seconds-segment">
+                    <p></p>
+                    <div class="flip-card left" seconds-tens>
+                        <div class="top">0</div>
+                        <div class="bottom">0</div>
+                    </div>
+                    <div class="flip-card right" seconds-units>
+                        <div class="top">0</div>
+                        <div class="bottom">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="date">
+            <p>Wednesday, 23 Aug</p>
+        </div>
+    </section>
+
+</body>
+
+</html>
