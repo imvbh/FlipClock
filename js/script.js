@@ -98,7 +98,7 @@ function flipAllCards() {
   flip(document.querySelector("[seconds-units]"), seconds % 10);
 }
 
-setInterval(flipAllCards, 200);
+setInterval(flipAllCards, 1000);
 
 function flip(flipCard, newNumber) {
   const topHalf = flipCard.querySelector(".top");
