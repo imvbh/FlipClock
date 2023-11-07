@@ -1,5 +1,7 @@
 # FlipClock
 
+View here:👇 https://imvbh.github.io/FlipClock/
+
 **FlipClock** is a web-based clock with a realistic flipping animation. It offers a clean and minimalist design with several key features:
 
 - **Smooth Flips:** FlipClock achieves smooth flips by animating each digit's top and bottom halves separately.
