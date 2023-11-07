@@ -10,8 +10,8 @@
 - **Auto Hide Buttons:** Buttons disappear after 2 seconds of inactivity for an uncluttered view.
 
 ## Logic behind flips
-    FlipClock achieves smooth flips by animating the top and bottom halves of each digit separately.
-    The flip function handles the animation of each digit by creating top and bottom flip elements and updating the displayed number.
+FlipClock achieves smooth flips by animating the top and bottom halves of each digit separately.
+The flip function handles the animation of each digit by creating top and bottom flip elements and updating the displayed number.
 
 ## Usage
 
